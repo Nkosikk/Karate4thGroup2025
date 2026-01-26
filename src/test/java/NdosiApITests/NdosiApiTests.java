@@ -7,11 +7,10 @@ public class NdosiApiTests {
 
     @Karate.Test
     Karate testNdosiAPI() {
-        return Karate.run("classpath:Features/ndosiApi.feature");
+        return Karate.run("classpath:Features/NdosiAPI");
     }
 
-    @Karate.Test
-    Results testNdosiAPIParallel() {
-        return Karate.run("classpath:Features/ndosiApi.feature").parallel(5);
-    }
+   // @Karate.Test
+    //Results testNdosiAPIParallel() {
+     //   return Karate.run("classpath:Features/NdosiAPI/ndosiApi.feature").parallel(5);}
 }

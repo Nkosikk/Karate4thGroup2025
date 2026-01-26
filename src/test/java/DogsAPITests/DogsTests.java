@@ -6,7 +6,7 @@ public class DogsTests {
 
     @Karate.Test
     Karate testDogsAPI() {
-        return Karate.run("classpath:Features/Dogs.feature");
+        return Karate.run("classpath:Features/DogsAPI/Dogs.feature");
     }
 
 
