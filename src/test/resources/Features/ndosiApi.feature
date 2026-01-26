@@ -4,6 +4,8 @@ Feature: Ndosi API Registration Tests
     * url 'https://www.ndosiautomation.co.za/API'
 
   Scenario: User Registration - Valid Data
+    * def now = new java.util.Date().getTime()
+    * def uniqueEmail = 'testuser_' + now + '@example.com'
     Given path '/register'
     And header Accept = 'application/json'
     And header Content-Type = 'application/json'
@@ -12,7 +14,7 @@ Feature: Ndosi API Registration Tests
       {
         "firstName": "John",
         "lastName": "Doe",
-        "email": "johnNkosi.doe@example.com",
+        "email": "#(uniqueEmail)",
         "password": "SecurePass123!",
         "confirmPassword": "SecurePass123!"
       }
